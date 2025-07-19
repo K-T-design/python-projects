@@ -32,7 +32,8 @@ while True:
         print(int(_nu1) % int(_nu2))
     else:
         print('I\'m Very Sorry This Function Has Not Been Added To My Functionality By My Developer')
-        break
+        continue
+    break
     
     
     
