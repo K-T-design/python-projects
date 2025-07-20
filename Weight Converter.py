@@ -10,21 +10,43 @@ print(_n)
 ans = input('>> ')
 while True:
     if ans.lower() == 'yes':
-        que = print('Please input your weight in pounds: ')
-        val_ = input('')
+        que = print('Do you want Your Weight in Kilograms or Ounces : ')
+        rep_ = input('')
         try:
-           conv_ = int(val_) / 2.205
+            rep_
         except:
-            print('You did not enter a valid value')
+            print('Check what you entered ')
+         
+    if rep_.lower() == 'kilograms':
+        kil_ = input(' Enter your weight in Pounds: ')
+    elif rep_.lower() == 'ounces':
+        oun_ = input('Enter your weight in Pounds: ')
+        
+    if rep_.lower() == 'kilograms':
+        try:
+            kilv_ = int(kil_) / 2.205
+        except:
+            print('Enter A Valid Value')
             continue
-        else:
-            print(f'Your Weight in Kilograms is {conv_}')
-            if conv_ >= 75:
-               print('Chimmmooooo!!!🙆‍♂️🙆‍♂️🙆‍♂️ Oga go loose weight ooo🤣🤣🤣')
+        print(f' Your weight in Kilograms is {kilv_} kg')
+        if kilv_ >= 75:
+            print('Chimmmooooo!!!🙆‍♂️🙆‍♂️🙆‍♂️ Oga go loose weight ooo🤣🤣🤣')
             
-            elif conv_ <= 74:
-               print('Your Weight is Nice. Don\'t add more ooo😂😂')
-               
+        elif kilv_ <= 74:
+            print('Your Weight is Nice. Don\'t add more ooo😂😂')
+        break
+        
+    if rep_.lower() == 'ounces':
+        try:
+            ounv_ = int(oun_) * 16
+        except:
+            print('Enter A Valid Value')
+            continue
+        print(f'Your weight in Ounces is {ounv_} oz')
+        if ounv_ >= 2645.45:
+            print('Chimmmooooo!!!🙆‍♂️🙆‍♂️🙆‍♂️ Oga go loose weight ooo🤣🤣🤣')
+        elif ounv_ <= 2644.44:
+            print('Your Weight is Nice. Don\'t add more ooo😂😂')       
         break
             
     elif ans.lower() == 'no':
